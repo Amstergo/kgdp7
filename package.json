@@ -9,6 +9,7 @@
   "author": "amstergo",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.14.0"
+    "express": "^4.14.0",
+    "handlebars": "^4.0.5"
   }
 }
