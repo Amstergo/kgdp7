@@ -4,6 +4,11 @@ var express = require('express');
 
 var app = express();
 
+var handlebars = require('express-handlebars')
+  .create({ defaultLayout:'main' });
+app.engine('handlebars', handlebars.engine);
+app.set('view engine', 'handlebars');
+
 app.set('port', process.env.PORT || 3000);
 
 app.get('/', function(req, res){
@@ -15,7 +20,7 @@ app.get('/about', function(req, res){
   res.send('O kgdp7');
 });
 
-// users 404 error
+// users 404
 
 app.use(function(req, res){
   res.type('text-plain');
