@@ -15,7 +15,7 @@ app.get('/about', function(req, res){
   res.send('O kgdp7');
 });
 
-// users 404
+// users 404 error
 
 app.use(function(req, res){
   res.type('text-plain');
